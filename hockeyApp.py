@@ -1,7 +1,7 @@
 import requests as req
 import json as j
 
-api_endpoint="https://api-web.nhle.com/v1/people/8478445"
+api_endpoint="https://api-web.nhle.com/v1/player/8478445/landing"
 
 response = req.get(api_endpoint)
 

@@ -1,0 +1,11 @@
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 741-450-770
+INFO:werkzeug:127.0.0.1 - - [03/Dec/2023 20:10:26] "GET / HTTP/1.1" 200 -
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api-web.nhle.com:443
+DEBUG:urllib3.connectionpool:https://api-web.nhle.com:443 "GET /v1/player/8478445/landing HTTP/1.1" 200 None
+INFO:app:Player stats retrieved: {'goals': 7}
+INFO:werkzeug:127.0.0.1 - - [03/Dec/2023 20:10:31] "POST / HTTP/1.1" 200 -
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api-web.nhle.com:443
+DEBUG:urllib3.connectionpool:https://api-web.nhle.com:443 "GET /v1/player/8478445/landing HTTP/1.1" 200 None
+INFO:app:Player stats retrieved: {'assists': 16}
+INFO:werkzeug:127.0.0.1 - - [03/Dec/2023 20:11:00] "POST / HTTP/1.1" 200 -

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, intial-scale=1.0">
+    <title>Hockey Stats App</title>
+</head>
+
+<body>
+    <h1>Welcome to the Hockey Stats App!</h1>
+
+    <form method="post" action="{{ url_for('home') }}">
+        <label for="player_id">Player ID:</label>
+        <input type="text" name="player_id" id="player_id" required>
+    
+        <label>Stats: </label>
+        <input type="checkbox" name="stats" value="goals"> Goals
+        <input type="checkbox" name="stats" value="assists"> Assists
+    
+        <button type="submit">Get Stats</button>
+    </form>
+    
+    {% if player_stats %}
+        <h2>Player Statistics</h2>
+        {% if player_stats.goals %}
+        <p>Goals: {{ player_stats.goals }}</p>
+        {% endif %}
+        {% if player_stats.assists %}
+        <p>Assists: {{ player_stats.assists }}</p>
+        {% endif %}
+    {% endif %}
+
+    {% if player_stats is not defined %}
+        <p>Error fetching player stats</p>
+    {% endif %}
+    
+</body>
+</html>
