@@ -10,6 +10,7 @@ CREATE TABLE IF NOT EXISTS Players (
     assists INTEGER,
     plus_minus INTEGER,
     team_id INTEGER, -- Foreign key
+    timestamp DATETIME DEFAULT CURRENT_TIMESTAMP,
     FOREIGN KEY (team_id) REFERENCES Teams(team_id)
 );
 

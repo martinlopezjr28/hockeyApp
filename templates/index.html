@@ -22,10 +22,10 @@
     
     {% if player_stats %}
         <h2>Player Statistics</h2>
-        {% if player_stats.goals %}
+        {% if player_stats.goals is defined %}
         <p>Goals: {{ player_stats.goals }}</p>
         {% endif %}
-        {% if player_stats.assists %}
+        {% if player_stats.assists is defined %}
         <p>Assists: {{ player_stats.assists }}</p>
         {% endif %}
     {% endif %}
